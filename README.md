@@ -30,8 +30,7 @@ Post /poll
 	]  
 } 
 ``` 
-
-	Retorna o id gerado da enquete inserida no banco de dados.  
+Retorna o id gerado da enquete inserida no banco de dados.  
 
 Post /poll/:id/vote  
 	Registra um voto para uma opção.  
