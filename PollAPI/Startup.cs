@@ -29,12 +29,11 @@ namespace PollAPI
         {
             services.AddControllers();
             services.AddDbContext<PollContext>();
-            services.AddScoped<PollSeeder>();
             services.AddAutoMapper(this.GetType().Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, PollSeeder pollSeeder)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, PollContext pollContext)
         {
             if (env.IsDevelopment())
             {
@@ -52,7 +51,7 @@ namespace PollAPI
                 endpoints.MapControllers();
             });
 
-            pollSeeder.Seed();
+            pollContext.Database.EnsureCreated();
         }
     }
 }
