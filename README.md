@@ -20,23 +20,27 @@ Get /poll/:id
 Post /poll
 	Cria uma nova enquete.  
 	Exemplo de formato:  
-	{  
-		"poll_description":"This is the question",  
-		"options":[  
-			{"description":"First Option"},  
-			{"description":"Second Option"},  
-			{"description":"Third Option"}  
-		]  
-	}  
+```json
+{  
+	"poll_description":"This is the question",  
+	"options":[  
+		{"description":"First Option"},  
+		{"description":"Second Option"},  
+		{"description":"Third Option"}  
+	]  
+} 
+``` 
 
 	Retorna o id gerado da enquete inserida no banco de dados.  
 
 Post /poll/:id/vote  
 	Registra um voto para uma opção.  
 	Exemplo de formato:  
-	{  
-		"option_id":1  
-	}  
+```json
+{  
+	"option_id":1  
+}
+```
 
 Get /poll/:id/stats
 	Retorna as estatísticas da enquete.  
