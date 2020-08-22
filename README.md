@@ -10,6 +10,7 @@ Deverão ser instalados pelo Visual Studio Installer as seguintes cargas de traba
 É necessário baixar e instalar o SDK do .Net Core 3.1 para construção de aplicativos, pelo link: https://dotnet.microsoft.com/download  
 Também é usado o SQL Server na versão gratuita Developer, disponível no link: https://www.microsoft.com/pt-br/sql-server/sql-server-downloads  
 Basta iniciar a depuração e os testes poderão ser executados.  
+O endereço para teste é https://localhost:44343/  
 OBSERVAÇÃO: A verificação de certificado SSL deve estar desativada no teste automatizado.  
 
 Exemplos:  
